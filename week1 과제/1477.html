@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            width: 1000px;
+           
+        }
+        .a-container{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
+        .회사명 {
+            
+            justify-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-right: 20px
+        }
+        
+        .b-container{
+           margin-right: 30px;
+           margin-top: 30px;
+           margin-left: 30px;
+            
+            border-bottom: 1px solid gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .b1-container{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin:20px;
+        }
+        .b2-container{
+            text-align: left;
+        }
+        .설명{
+            text-align: right;
+            margin-bottom: 20px;
+            margin-right:30px;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class ="container">
+
+        <div class = "a-container">
+            <div class="profile"><img src="./profile.jpg" alt ="프로필 사진"></div>
+            <div class = "회사명">Company Name</div>
+        </div>
+
+        <div class = "b-container">
+            <div class = "b1-container">
+                <div class ="k-name">한글 이름</div>
+                <div class = "e-name">English Name</div>
+            </div>
+            <div class = "b2-container">
+                <div class ="p-num">Phone Number</div>
+                <div class = "email">Email</div>
+            </div>
+        </div>
+        <div class="설명">discription</div>
+    </div>   
+</body>
+</html>
+<!-- 이미지와 회사명은 같은 라인에 위치 할 수 있도록 함
+한글 이름과 영어 이름은 전화번호와 이메일과 같은 줄에 위치하도록함
+설명은 오른쪽에 정렬
+ -->

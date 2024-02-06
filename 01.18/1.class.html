@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>HELLO</div>
+
+    <script>
+        const div = document.querySelector("div");
+
+        
+        div.classList.add("test");
+
+        div.classList.remove("test");
+
+        div.classList.toggle("test");
+
+        const result = div.classlist.contains("test");
+        console.log(result);
+
+        div.classList.add("hello");
+
+        div.classList.replace("hello","hi");
+
+    </script>
+</body>
+</html>

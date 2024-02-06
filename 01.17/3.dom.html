@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My title</title>
+</head>
+<body>
+    <h1> A heading</h1>
+    <a href = "">Link text</a>
+
+    <script>
+        console.log(document);
+        console.dir(document);
+
+        //children  접근
+        console.log(document.children[0]);
+        //body
+        console.log(document.children[0].children[1]);
+
+        console.log(document.children[0].children[1].children[0].textContent);
+        document.children[0].children[1].children[0].textContent="안녕";
+
+        //document.querySelector("선택자")
+        // CSS Selector를 활용해서 DOM에 해당되는 첫번재를 가져오는 법
+        const h1Tag = document.querySelector("h1");
+        console.log(h1Tag);
+
+        //document.querySelectorAll("선택자")
+        //CSS sleector 의 모든걸 담아서 가져온다. 
+    </script>
+</body>
+</html>

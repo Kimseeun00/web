@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <style>
+      .setting-icon {
+        border: 1px solid black;
+        font-size: 4rem;
+        cursor: pointer;
+      }
+      .setting-icon:hover { 
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="setting-icon material-symbols-outlined">
+      expand_circle_down
+    </span>
+    <script>
+        const settingIcon = document.querySelector(".setting-icon");
+        settingIcon.addEventListener("click", function(){
+            alert("hello");
+        })
+    </script>
+  </body>
+</html>

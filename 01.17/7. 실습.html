@@ -1,0 +1,40 @@
+<!-- 아이디와 패스워드를 입력받는 input 2개 있고, 로그인 버튼 있 -->
+<!-- 1. 버튼을 누르면 아이디와 비밀번호가 출력
+    2. id나 비밀번호의 경우 , " " 일경우엔 버튼이 작동 안해야 함
+    3. 버튼을 누르는 동작은, 엔터를 누르는 동작과 똑같아야 한다.
+    4. 만약, id = "jony", pw ="123456" 일 경우,
+    - 로그인 성공
+    - 반대 경우는 실패
+    5. 아이디가 틀렸는지, 비밀번호가 틀렸는지를 알려주라 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class ="id" type="text" placeholder="아이디 입력">
+    <input class ="password" type="password" placeholder="비밀번호 입력">
+    <button>출력</button>
+    <script>
+        const id = document.querySelector(".id");
+        const pw = document.querySelector(".password");
+        const btn = document.querySelector("button");
+
+        btn.addEventListener("click", function(){
+            console.log(id.value);
+            console.log(pw.value);
+        });
+     
+        validCheck (){
+            if(id.value === " "|| pw.value === " ")
+            if(id.value === "jony" && pw.value === "123456")
+                console.log("로그인 성공");
+            if()
+            
+        };
+    </script>
+</body>
+</html>
