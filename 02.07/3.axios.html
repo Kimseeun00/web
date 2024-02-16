@@ -11,24 +11,25 @@
       integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    >
-     const url = "https://jsonplaceholder.typicode.com/todos/";
-     axios.get(url).then(res => {
-        console.log(res);
-        console.log(res.data);
-        const lastData = res.data.find(li => li.id ===200);
-        console.log(lasdData);
-        console.log(lasdData.id).then(result => console.log(result_));
-         // 리스트를 받아와서 200인 애만 받아와서 다시 200인애을 요청보냄
+    ></script>
+    <script>
+      const url = "https://jsonplaceholder.typicode.com/todos/";
+      axios.get(url).then(res => {
+          console.log(res);
+          console.log(res.data);
+          const lastData = res.data.find(li => li.id ===200);
+          console.log(lasdData);
+          console.log(lasdData.id).then(result => console.log(result_));
+          // 리스트를 받아와서 200인 애만 받아와서 다시 200인애을 요청보냄
 
-         // 얘도  분명히 콜백 해결한다 했는데 얘도 반복되니가 깊이가 생기네?
-         // 이걸 해결하기 위해 async /await 등장!
-        // 중첩 요청
-        //id가 200인 경우 https://jsonplaceholder.typicode.com/todos/200
+          // 얘도  분명히 콜백 해결한다 했는데 얘도 반복되니가 깊이가 생기네?
+          // 이걸 해결하기 위해 async /await 등장!
+          // 중첩 요청
+          //id가 200인 경우 https://jsonplaceholder.typicode.com/todos/200
 
-     }).catch((error) =>{
-        console.log(error);
-     })
-</script>
+      }).catch((error) =>{
+          console.log(error);
+      })
+    </script>
   </body>
 </html>

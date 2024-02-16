@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+    integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"> </script>
+
+  <script>
+   const url = "https://jsonplaceholder.typicode.com/todos/";
+   
+   async function start(){
+    try{
+
+        //여기에ㅣ 오면 대기
+        const result = await axios.get(url);
+        // 위가 마무리되어야 아래로 실행
+        console.log(result);
+        const lastData = result.data.find(li => li.id ===200);
+        console.log(lasdData);
+        const detail = await axios.get(url + lastData.id);
+        console.log(detail);
+
+    } catch(error){
+        console.log(error);
+    }
+    
+   }
+   start();
+
+   </script>
+</body>
+</html>

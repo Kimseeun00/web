@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>나의 포트폴리오</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    Hi
+  <h1>안녕하세요, 제 이름은 <b id="name">홍길동</b>입니다.</h1>
+  
+  <img src="" alt="" width="200">
+  
+  <h2>소개</h2>
+  <p>저는 <b id="job">[직업/전공]</b>으로 일하고 있습니다. <b id="experience">[간단한 경력/학력]</b>을 가지고 있으며, <b>[특기 또는 관심 분야]</b>에 대해 꾸준히 공부하고 있습니다.</p>
+  
+  <h2>프로젝트</h2>
+  <ul id="list-group">
+    <li><b>프로젝트 1:</b> <span class="project-1">[프로젝트 1 제목]</span></li>
+    <li><b>프로젝트 2:</b> <span class="project-2">[프로젝트 2 제목]</span></li>
+    <li><b>프로젝트 3:</b> <span class="project-3">[프로젝트 3 제목]</span></li>
+  </ul>
+  
+  <h2>연락처</h2>
+  <p>이메일: <b id="email">[이메일 주소]</b></p>
+  <p>전화번호: <b id="phone">[전화번호]</b></p>
+
+  <script>
+    const name = document.querySelector("#name");
+    const job = document.querySelector("#job");
+    const experience = document.querySelector("#experience");
+    const email = document.querySelector("#email");
+    const phone = document.querySelector("#phone");
+    const img = document.querySelector("img");
+
+    name.textContent = "김세은";
+    job.textContent = "학생";
+    experience.textContent = "사회복지사자격증";
+    email.textContent = "kse08160@naver.com";
+    phone.textContent = "010-7355-8643";
+
+    img.src = "./profile.jpg";
+    img.alt = "프로필";
+
+    const body = document.querySelector('body');
+    const h1 = document.querySelector('h1');
+    
+
+    body.classList.add("container");
+    h1.classList.add("title");
+    img.classList.add("img");
+
+    name.classList.add("highlight");
+    job.classList.add("highlight");
+    experience.classList.add("highlight");
+    email.classList.add("highlight");
+    phone.classList.add("highlight");
+
+    const p = document.createElement("p");
+    const text1 = document.createTextNode("SNS : ");
+    const b = document.createElement("b");
+    const text2 = document.createTextNode("hgd@sns.com");
+   
+    body.appendChild(p);
+    body.appendChild(text1);
+    body.appendChild(b);
+    body.appendChild(text2);
+  </script>
 </body>
 </html>

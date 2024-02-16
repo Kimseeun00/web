@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const scores = [90, 80, 70, 60, 40];
+
+      const length = scores.length;
+      console.log(length);
+
+      let sum = 0;
+      scores.forEach((score) => {
+        sum += score;
+      });
+      console.log(sum);
+
+      avg = sum / length;
+      console.log(avg);
+
+      let idx = length - 1;
+      while (idx != -1) {
+        console.log(scores[idx]);
+        idx--;
+      }
+    </script>
+  </body>
+</html>

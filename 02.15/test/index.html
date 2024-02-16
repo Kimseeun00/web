@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type = "file">
+    <button id = "submit-button">파일 전송하기</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script>
+        const inputFile = document.querySelector("#input-file");
+        const submitButton = document.querySelector("#submit-button");
+        
+        console.log(inputFile);
+        console.log(submitButton);
+
+        submitButton.addEventListener("click", ()=> {
+            console.log(inputFile.files);
+
+            const formData = new FormData();
+            formData.append("file", inputFile.file[0]);
+
+            axios.post("http://localhost:8080/api/file", fromData, {
+                headers: {
+                    "Content-type": "multipart/form-data",
+                },
+            });
+        });
+
+    </script>
+</body>
+</html>
